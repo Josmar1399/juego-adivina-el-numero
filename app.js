@@ -2,7 +2,8 @@
  let numeroSecreto = 6;
 let numeroDeUsuario = 0;
 let intentos = 1;
-let palabraIntentos = 'intento'
+// let palabraIntentos = 'intento'; (se eliminó la variable por operador ternario)
+let maximoDeIntentos = 3;
 //condicionante del juego 
 
 while (numeroDeUsuario != numeroSecreto){
@@ -10,7 +11,7 @@ while (numeroDeUsuario != numeroSecreto){
  console.log (numeroDeUsuario);
  
       if (numeroDeUsuario == numeroSecreto){
-         alert(`acertaste, el número es: ${numeroDeUsuario}. acertaste en ${intentos} ${palabraIntentos}`);
+         alert(`acertaste, el número es: ${numeroDeUsuario}. acertaste en ${intentos} ${intentos ==1 ? 'vez' : 'veces' }`);
          mensajeDeBienvenida = ('Bienvenido a la app');
          alert(mensajeDeBienvenida);
       } else {
@@ -21,9 +22,10 @@ while (numeroDeUsuario != numeroSecreto){
             alert ('el número es mayor');
             }
       }
-      intentos = intentos + 1; 
-      palabraIntentos = 'intentos'
-      if (intentos > 3){
+      // intentos = intentos + 1; 
+      intentos ++
+      // palabraIntentos = 'intentos' (se eliminó la variable por operador ternario)
+      if (intentos > maximoDeIntentos){
          alert ('No te quedan mas oportunidades');
          break
       }
