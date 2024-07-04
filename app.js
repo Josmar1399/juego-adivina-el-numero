@@ -1,18 +1,26 @@
  //inicio de codigo, alta de variables
- numeroSecreto = 6;
-let numeroDeUsuario = prompt("dame un número:");
-/*
-monitoreo de ingreso de dato
-*/
+ let numeroSecreto = 6;
+let numeroDeUsuario = 0;
+let intentos = 1;
+let palabraIntentos = 'intento'
+//condicionante del juego 
+
+while (numeroDeUsuario != numeroSecreto){
+ numeroDeUsuario = prompt("dame un número:");
  console.log (numeroDeUsuario);
-/*
-condicionante del juego 
-*/
- if (numeroDeUsuario == numeroSecreto){
-    alert(`acertaste, el número es: ${numeroDeUsuario}`);
-    mensajeDeBienvenida = ('Bienvenido a la app');
-    alert(mensajeDeBienvenida);
- } else {
-    alert ('Lo siento, No acertaste');
- }
  
+      if (numeroDeUsuario == numeroSecreto){
+         alert(`acertaste, el número es: ${numeroDeUsuario}. acertaste en ${intentos} ${palabraIntentos}`);
+         mensajeDeBienvenida = ('Bienvenido a la app');
+         alert(mensajeDeBienvenida);
+      } else {
+         if (numeroDeUsuario > numeroSecreto) {
+            alert ('el número es menor');
+         }
+            else {
+            alert ('el número es mayor');
+            }
+      }
+      intentos = intentos + 1; 
+      palabraIntentos = 'intentos'
+}
