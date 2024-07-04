@@ -23,4 +23,8 @@ while (numeroDeUsuario != numeroSecreto){
       }
       intentos = intentos + 1; 
       palabraIntentos = 'intentos'
+      if (intentos > 3){
+         alert ('No te quedan mas oportunidades');
+         break
+      }
 }
