@@ -5,7 +5,7 @@ let intentos = 1;
 // let palabraIntentos = 'intento'; (se eliminó la variable por operador ternario)
 let maximoDeIntentos = 3;
 let numeroMenor = 1; 
-let numeroMayor = Math.floor(Math.random()*40)+4; 
+let numeroMayor = Math.floor(Math.random()*40)+4; // se hace aleatorio la cantidad de opciones
 //condicionante del juego 
 
 while (numeroDeUsuario != numeroSecreto){
